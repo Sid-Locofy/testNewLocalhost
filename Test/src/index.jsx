@@ -13,7 +13,7 @@ import {
 import "./global.css";
 
 const muiTheme = createTheme();
-
+const deleteTheem = "Sid"
 const container = document.getElementById("root");
 const root = createRoot(container);
 
