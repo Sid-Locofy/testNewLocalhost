@@ -9,6 +9,7 @@ import {
 import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { useNavigate } from "react-router-dom";
+import Header from "../components/Header";
 import SearchSectionHeader from "../components/SearchSectionHeader";
 import ListingItem from "../components/ListingItem";
 import Footer from "../components/Footer";
@@ -28,35 +29,11 @@ const Homepage = () => {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <div className={styles.homepage}>
-        <header className={styles.header}>
-          <div className={styles.headerContent}>
-            <img
-              className={styles.logoIcon}
-              loading="lazy"
-              alt=""
-              src="/logo.svg"
-            />
-            <div className={styles.navLinks}>
-              <a className={styles.home}>Home</a>
-              <a className={styles.stays}>Stays</a>
-              <a className={styles.becomeAHost}>Become a host</a>
-            </div>
-            <div className={styles.loginSection}>
-              <img
-                className={styles.notificationsIcon}
-                loading="lazy"
-                alt=""
-                src="/notifications@2x.png"
-              />
-              <img
-                className={styles.avatarIcon}
-                loading="lazy"
-                alt=""
-                src="/avatar@2x.png"
-              />
-            </div>
-          </div>
-        </header>
+        <Header
+          notifications="/notifications@2x.png"
+          avatar="/avatar@2x.png"
+          showLoginSection
+        />
         <div className={styles.heroContainer}>
           <div className={styles.heroContainerInner}>
             <div className={styles.frameParent}>

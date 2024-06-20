@@ -1,3 +1,4 @@
+import Header from "../components/Header";
 import ContentWrapper from "../components/ContentWrapper";
 import ListingDescription from "../components/ListingDescription";
 import LocationAmenities from "../components/LocationAmenities";
@@ -9,35 +10,11 @@ import styles from "./PropertyDetails.module.css";
 const PropertyDetails = () => {
   return (
     <div className={styles.propertyDetails}>
-      <header className={styles.header}>
-        <div className={styles.headerContent}>
-          <img
-            className={styles.logoIcon}
-            loading="lazy"
-            alt=""
-            src="/logo.svg"
-          />
-          <div className={styles.navLinks}>
-            <a className={styles.home}>Home</a>
-            <a className={styles.stays}>Stays</a>
-            <a className={styles.becomeAHost}>Become a host</a>
-          </div>
-          <div className={styles.loginSection}>
-            <img
-              className={styles.notificationsIcon}
-              loading="lazy"
-              alt=""
-              src="/notifications@2x.png"
-            />
-            <img
-              className={styles.avatarIcon}
-              loading="lazy"
-              alt=""
-              src="/avatar@2x.png"
-            />
-          </div>
-        </div>
-      </header>
+      <Header
+        notifications="/notifications@2x.png"
+        avatar="/avatar@2x.png"
+        showLoginSection
+      />
       <main className={styles.pageBody}>
         <ContentWrapper />
         <section className={styles.listingDetailsSection}>
