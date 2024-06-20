@@ -13,7 +13,7 @@ import {
 import "./global.css";
 
 const muiTheme = createTheme();
-
+const sid = "Locofy"
 const container = document.getElementById("root");
 const root = createRoot(container);
 
