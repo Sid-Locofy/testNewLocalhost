@@ -6,7 +6,6 @@ import {
   IconButton,
   Button,
 } from "@mui/material";
-import Header from "../components/Header";
 import SocialMediaLogin from "../components/SocialMediaLogin";
 import { useNavigate } from "react-router-dom";
 import styles from "./SignInPage.module.css";
@@ -21,11 +20,33 @@ const SignInPage = () => {
   return (
     <div className={styles.signInPage}>
       <main className={styles.headerParent}>
-        <Header
-          notifications="/notifications1@2x.png"
-          avatar="/asset/avatar@2x.png"
-          showLoginSection={false}
-        />
+        <header className={styles.header}>
+          <div className={styles.headerContent}>
+            <img
+              className={styles.logoIcon}
+              loading="lazy"
+              alt=""
+              src="/logo.svg"
+            />
+            <div className={styles.navLinks}>
+              <a className={styles.home}>Home</a>
+              <a className={styles.stays}>Stays</a>
+              <a className={styles.becomeAHost}>Become a host</a>
+            </div>
+            <div className={styles.loginSection}>
+              <img
+                className={styles.notificationsIcon}
+                alt=""
+                src="/notifications1@2x.png"
+              />
+              <img
+                className={styles.avatarIcon}
+                alt=""
+                src="/asset/avatar@2x.png"
+              />
+            </div>
+          </div>
+        </header>
         <section className={styles.loginSections}>
           <div className={styles.loginFormContainer}>
             <div className={styles.form}>

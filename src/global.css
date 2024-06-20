@@ -17,8 +17,6 @@ body {
   --font-size-xl: 20px;
   --font-size-lgi: 19px;
   --font-size-xs: 12px;
-  --font-size-21xl-4: 40.4px;
-  --font-size-13xl: 32px;
   --font-size-5xl: 24px;
   --font-size-3xs: 10px;
   --font-size-lg: 18px;
@@ -34,7 +32,6 @@ body {
   --color-gray-200: #7a7a7a;
   --light-text: #787878;
   --dark: #171e1d;
-  --color-gray-300: rgba(0, 0, 0, 0.85);
   --light-grey-border: #e8ecf2;
   --color-black: #000;
   --color-whitesmoke-100: #f8f8f8;
@@ -90,8 +87,6 @@ body {
   --padding-8xs: 5px;
   --padding-5xs: 8px;
   --padding-31xl: 50px;
-  --padding-11xl: 30px;
-  --padding-4xs: 9px;
   --padding-2xs: 11px;
   --padding-6xl: 25px;
   --padding-42xl: 61px;
