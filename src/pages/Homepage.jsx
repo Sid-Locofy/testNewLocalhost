@@ -15,12 +15,8 @@ import ListingItem from "../components/ListingItem";
 import Footer from "../components/Footer";
 import PropTypes from "prop-types";
 import styles from "./Homepage.module.css";
-const data = {
-  notifications: "/notifications@2x.png",
-  avatar: "/avatar@2x.png",
-  showLoginSection: false
-}
-const Homepage = () => {
+
+const Homepage = ({ notifications, avatar }) => {
   const [frameDateTimePickerValue, setFrameDateTimePickerValue] =
     useState(null);
   const [frameDateTimePicker1Value, setFrameDateTimePicker1Value] =
@@ -35,9 +31,9 @@ const Homepage = () => {
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <div className={styles.homepage}>
         <HeaderSid
-          notifications={data.notifications}
-          avatar={data.avatar}
-          showLoginSection={data.showLoginSection}
+          notifications="/avatar@2x.png"
+          avatar="/avatar@2x.png"
+          showLoginSection={false}
         />
         <div className={styles.heroContainer}>
           <div className={styles.heroContainerInner}>
