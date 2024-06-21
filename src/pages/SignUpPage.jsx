@@ -6,7 +6,7 @@ import {
   IconButton,
   Button,
 } from "@mui/material";
-import Header from "../components/Header";
+import HeaderSid from "../components/HeaderSid";
 import SocialMediaLogin from "../components/SocialMediaLogin";
 import { useNavigate } from "react-router-dom";
 import styles from "./SignUpPage.module.css";
@@ -20,7 +20,7 @@ const SignUpPage = () => {
 
   return (
     <div className={styles.signUpPage}>
-      <Header
+      <HeaderSid
         notifications="/notifications@2x.png"
         avatar="/avatar@2x.png"
         showLoginSection={false}

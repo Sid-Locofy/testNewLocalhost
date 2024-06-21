@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import HeaderSid from "../components/HeaderSid";
 import ContentWrapper from "../components/ContentWrapper";
 import ListingDescription from "../components/ListingDescription";
 import LocationAmenities from "../components/LocationAmenities";
@@ -10,7 +10,7 @@ import styles from "./PropertyDetails.module.css";
 const PropertyDetails = () => {
   return (
     <div className={styles.propertyDetails}>
-      <Header
+      <HeaderSid
         notifications="/notifications@2x.png"
         avatar="/avatar@2x.png"
         showLoginSection

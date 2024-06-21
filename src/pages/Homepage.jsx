@@ -9,13 +9,14 @@ import {
 import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { useNavigate } from "react-router-dom";
-import Header from "../components/Header";
+import HeaderSid from "../components/HeaderSid";
 import SearchSectionHeader from "../components/SearchSectionHeader";
 import ListingItem from "../components/ListingItem";
 import Footer from "../components/Footer";
+import PropTypes from "prop-types";
 import styles from "./Homepage.module.css";
 
-const Homepage = () => {
+const Homepage = ({ notifications, avatar }) => {
   const [frameDateTimePickerValue, setFrameDateTimePickerValue] =
     useState(null);
   const [frameDateTimePicker1Value, setFrameDateTimePicker1Value] =
@@ -29,7 +30,7 @@ const Homepage = () => {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <div className={styles.homepage}>
-        {true} && <Header
+        <HeaderSid
           notifications="/notifications@2x.png"
           avatar="/avatar@2x.png"
           showLoginSection
@@ -446,6 +447,11 @@ const Homepage = () => {
       </div>
     </LocalizationProvider>
   );
+};
+
+Homepage.propTypes = {
+  notifications: PropTypes.string,
+  avatar: PropTypes.string,
 };
 
 export default Homepage;

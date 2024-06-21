@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import styles from "./Header.module.css";
 
-const Header = ({
+const HeaderSid = ({
   className = "",
   notifications,
   avatar,
@@ -42,11 +42,11 @@ const Header = ({
   );
 };
 
-Header.propTypes = {
+HeaderSid.propTypes = {
   className: PropTypes.string,
   notifications: PropTypes.string,
   avatar: PropTypes.string,
   showLoginSection: PropTypes.bool,
 };
 
-export default Header;
+export default HeaderSid;
