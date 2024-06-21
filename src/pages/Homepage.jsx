@@ -29,7 +29,7 @@ const Homepage = () => {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <div className={styles.homepage}>
-        <Header
+        {true} && <Header
           notifications="/notifications@2x.png"
           avatar="/avatar@2x.png"
           showLoginSection
