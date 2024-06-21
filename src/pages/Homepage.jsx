@@ -20,7 +20,7 @@ const data = {
   avatar: "/avatar@2x.png",
   showLoginSection: false
 }
-const Homepage = ({ notifications, avatar }) => {
+const Homepage = () => {
   const [frameDateTimePickerValue, setFrameDateTimePickerValue] =
     useState(null);
   const [frameDateTimePicker1Value, setFrameDateTimePicker1Value] =
@@ -35,9 +35,9 @@ const Homepage = ({ notifications, avatar }) => {
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <div className={styles.homepage}>
         <HeaderSid
-          notifications="/notifications@2x.png"
-          avatar="/avatar@2x.png"
-          showLoginSection
+          notifications={data.notifications}
+          avatar={data.avatar}
+          showLoginSection={data.showLoginSection}
         />
         <div className={styles.heroContainer}>
           <div className={styles.heroContainerInner}>
