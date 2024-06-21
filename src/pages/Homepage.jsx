@@ -15,7 +15,11 @@ import ListingItem from "../components/ListingItem";
 import Footer from "../components/Footer";
 import PropTypes from "prop-types";
 import styles from "./Homepage.module.css";
-
+const data = {
+  notifications: "/notifications@2x.png",
+  avatar: "/avatar@2x.png",
+  showLoginSection: false
+}
 const Homepage = ({ notifications, avatar }) => {
   const [frameDateTimePickerValue, setFrameDateTimePickerValue] =
     useState(null);
