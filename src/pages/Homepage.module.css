@@ -79,6 +79,7 @@
   max-width: 100%;
 }
 .frameParent,
+.heroContainer,
 .heroContainerInner {
   display: flex;
   flex-direction: column;
@@ -90,8 +91,12 @@
   gap: var(--gap-5xl);
   max-width: 1280px;
 }
+.heroContainer,
 .heroContainerInner {
   align-self: stretch;
+  max-width: 100%;
+}
+.heroContainerInner {
   align-items: center;
   padding: var(--padding-31xl) var(--padding-61xl) 30px;
   box-sizing: border-box;
@@ -99,27 +104,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  max-width: 100%;
-}
-.heroContainer,
-.homes {
-  display: flex;
-  align-items: flex-start;
 }
 .heroContainer {
-  align-self: stretch;
-  flex-direction: column;
-  justify-content: flex-start;
-  max-width: 100%;
-}
-.homes {
-  width: 100%;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px 18.7px;
-  max-width: 1280px;
-  min-height: 1692px;
+  align-items: flex-start;
 }
 .showMoreButton {
   width: 147px;
@@ -214,8 +201,7 @@
   .form {
     flex-wrap: wrap;
   }
-  .frameParent,
-  .homes {
+  .frameParent {
     max-width: 100%;
   }
   .staysSection {

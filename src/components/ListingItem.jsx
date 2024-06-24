@@ -1,35 +1,17 @@
-import { useMemo, useCallback } from "react";
+import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "./ListingItem.module.css";
 
 const ListingItem = ({
   className = "",
+  onListingItemContainerClick,
   listingImage,
   listingTitle,
   listingSubtitle,
   rating,
   price,
-  propDisplay,
-  propMinWidth,
-  propDisplay1,
-  propMinWidth1,
-  onListingItemContainerClick,
 }) => {
-  const listingTitleStyle = useMemo(() => {
-    return {
-      display: propDisplay,
-      minWidth: propMinWidth,
-    };
-  }, [propDisplay, propMinWidth]);
-
-  const listingSubtitleStyle = useMemo(() => {
-    return {
-      display: propDisplay1,
-      minWidth: propMinWidth1,
-    };
-  }, [propDisplay1, propMinWidth1]);
-
   const navigate = useNavigate();
 
   const onListingItemContainerClick1 = useCallback(() => {
@@ -61,15 +43,8 @@ const ListingItem = ({
       <div className={styles.itemDetails}>
         <div className={styles.listingInfo}>
           <div className={styles.listingCont}>
-            <b className={styles.listingTitle} style={listingTitleStyle}>
-              {listingTitle}
-            </b>
-            <div
-              className={styles.listingSubtitle}
-              style={listingSubtitleStyle}
-            >
-              {listingSubtitle}
-            </div>
+            <b className={styles.listingTitle}>{listingTitle}</b>
+            <div className={styles.listingSubtitle}>{listingSubtitle}</div>
           </div>
           <div className={styles.ratingCont}>
             <b className={styles.rating}>{rating}</b>
@@ -99,12 +74,6 @@ ListingItem.propTypes = {
   listingSubtitle: PropTypes.string,
   rating: PropTypes.string,
   price: PropTypes.string,
-
-  /** Style props */
-  propDisplay: PropTypes.any,
-  propMinWidth: PropTypes.any,
-  propDisplay1: PropTypes.any,
-  propMinWidth1: PropTypes.any,
 
   /** Action props */
   onListingItemContainerClick: PropTypes.func,
