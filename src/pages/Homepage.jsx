@@ -27,13 +27,18 @@ const Homepage = ({ notifications, avatar }) => {
     navigate("/property-details");
   }, [navigate]);
 
+  const data = {
+    notifications: "/notifications@2x.png",
+    avatar: "/avatar@2x.png",
+    showLoginSection: false
+  }  
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <div className={styles.homepage}>
         <HeaderSid
-          notifications="/avatar@2x.png"
-          avatar="/avatar@2x.png"
-          showLoginSection={false}
+          notifications={data.notifications}
+          avatar={data.avatar}
+          showLoginSection={data.showLoginSection}
         />
         <div className={styles.heroContainer}>
           <div className={styles.heroContainerInner}>
