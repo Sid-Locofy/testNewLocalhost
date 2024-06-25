@@ -20,7 +20,6 @@ const Homepage = ({ notifications, avatar }) => {
     useState(null);
   const [frameDateTimePicker1Value, setFrameDateTimePicker1Value] =
     useState(null);
-
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <div className={styles.homepage}>
