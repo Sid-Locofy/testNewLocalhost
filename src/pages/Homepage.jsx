@@ -26,11 +26,11 @@ const Homepage = ({ notifications, avatar }) => {
   const onListingItemContainerClick = useCallback(() => {
     navigate("/property-details");
   }, [navigate]);
-
+  
   const data = {
     notifications: "/notifications@2x.png",
     avatar: "/avatar@2x.png",
-    showLoginSection: false
+    showLoginSection: true
   }  
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -38,7 +38,7 @@ const Homepage = ({ notifications, avatar }) => {
         <HeaderSid
           notifications={data.notifications}
           avatar={data.avatar}
-          showLoginSection={data.showLoginSection}
+          showLoginSection={!data.showLoginSection}
         />
         <div className={styles.heroContainer}>
           <div className={styles.heroContainerInner}>
