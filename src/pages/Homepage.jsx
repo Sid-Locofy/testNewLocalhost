@@ -29,9 +29,9 @@ const Homepage = ({ notifications, avatar }) => {
       <LocalizationProvider dateAdapter={AdapterDateFns}>
         <div className={styles.homepage}>
           <HeaderSid
-            notifications={data.notifications}
-            avatar={data.avatar}
-            showLoginSection={!data.showLoginSection}
+            notifications="/avatar@2x.png"
+            avatar="/avatar@2x.png"
+            showLoginSection={false}
           />
         <div className={styles.heroContainer}>
           <div className={styles.heroContainerInner}>
