@@ -20,19 +20,14 @@ const Homepage = ({ notifications, avatar }) => {
     useState(null);
   const [frameDateTimePicker1Value, setFrameDateTimePicker1Value] =
     useState(null);
-    const data = {
-      notifications: "/notifications@2x.png",
-      avatar: "/avatar@2x.png",
-      showLoginSection: true
-    }  
-    return (
-      <LocalizationProvider dateAdapter={AdapterDateFns}>
-        <div className={styles.homepage}>
-          <HeaderSid
-            notifications="/avatar@2x.png"
-            avatar="/avatar@2x.png"
-            showLoginSection={false}
-          />
+  return (
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <div className={styles.homepage}>
+        <HeaderSid
+          notifications="/avatar@2x.png"
+          avatar="/avatar@2x.png"
+          showLoginSection={false}
+        />
         <div className={styles.heroContainer}>
           <div className={styles.heroContainerInner}>
             <div className={styles.frameParent}>
