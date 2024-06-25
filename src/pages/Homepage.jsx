@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import {
   TextField,
   InputAdornment,
@@ -8,7 +8,6 @@ import {
 } from "@mui/material";
 import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
-import { useNavigate } from "react-router-dom";
 import HeaderSid from "../components/HeaderSid";
 import SearchSectionHeader from "../components/SearchSectionHeader";
 import Homes from "../components/Homes";
@@ -21,24 +20,14 @@ const Homepage = ({ notifications, avatar }) => {
     useState(null);
   const [frameDateTimePicker1Value, setFrameDateTimePicker1Value] =
     useState(null);
-  const navigate = useNavigate();
 
-  const onListingItemContainerClick = useCallback(() => {
-    navigate("/property-details");
-  }, [navigate]);
-  
-  const data = {
-    notifications: "/notifications@2x.png",
-    avatar: "/avatar@2x.png",
-    showLoginSection: true
-  }  
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <div className={styles.homepage}>
         <HeaderSid
-          notifications={data.notifications}
-          avatar={data.avatar}
-          showLoginSection={!data.showLoginSection}
+          notifications="/avatar@2x.png"
+          avatar="/avatar@2x.png"
+          showLoginSection={false}
         />
         <div className={styles.heroContainer}>
           <div className={styles.heroContainerInner}>
